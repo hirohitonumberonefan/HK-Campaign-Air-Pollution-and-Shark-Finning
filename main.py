@@ -1,6 +1,6 @@
 import flask
 from flask import Flask, render_template, redirect
-app = Flask('Project Day website')
+app = Flask('HK Campaign| Air Pollution and Shark Finning Official Website')
 #Redirect if no route specified
 @app.route('/')
 def redirect_to_home():
