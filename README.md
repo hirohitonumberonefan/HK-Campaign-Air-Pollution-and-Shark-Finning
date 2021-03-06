@@ -1,5 +1,5 @@
 # Official GitHub Repository for the HK | Campaign | Air Pollution and Shark Finning website
-## The official HK Campaign Website repository.
+## The official HK Campaign Website GitHub repository.
 ### Website link
 #### You can visit the website at https://hk-campaign-air-pollution-and-shark-finning.98129182.repl.co.
 ### What is this? 
