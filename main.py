@@ -16,4 +16,7 @@ def render_shark_finning():
 @app.route('/air_pollution')
 def render_air_pollution():
   return(render_template('air_pollution.html'))
+@app.errorhandler(404)
+def page_not_found(e):
+  return(render_template('404.html'))
 app.run(host='0.0.0.0',port=8080)
