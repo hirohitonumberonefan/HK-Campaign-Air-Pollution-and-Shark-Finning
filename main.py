@@ -1,4 +1,5 @@
 import flask
+import os
 from flask import Flask, render_template, redirect
 app = Flask('HK Campaign | Air Pollution and Shark Finning Official Website')
 #Redirect if no route specified
@@ -16,7 +17,10 @@ def render_shark_finning():
 @app.route('/air_pollution')
 def render_air_pollution():
   return(render_template('air_pollution.html'))
+@app.route('/petition')
+def render_petition_page():
+  return(render_template('petition.html'))
 @app.errorhandler(404)
 def page_not_found(e):
   return(render_template('404.html'))
-app.run(host='0.0.0.0',port=8000)
+app.run(host='0.0.0.0',port=8080)
