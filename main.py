@@ -19,4 +19,4 @@ def render_air_pollution():
 @app.errorhandler(404)
 def page_not_found(e):
   return(render_template('404.html'))
-app.run(host='0.0.0.0',port=8080)
+app.run(host='0.0.0.0',port=8000)
