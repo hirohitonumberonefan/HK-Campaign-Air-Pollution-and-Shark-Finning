@@ -1,8 +1,22 @@
 import flask
+import time
+import asyncio
+import flask_script
 import os
+from api import *
+import threading
 from flask import Flask, render_template, redirect
 app = Flask('HK Campaign | Air Pollution and Shark Finning Official Website')
 #Redirect if no route specified
+async def air_api_task():
+  while True:
+    await get_data()
+    time.sleep(400)
+def api_task_loop():
+  loop = asyncio.new_event_loop()
+  asyncio.set_event_loop(loop)
+  loop.run_until_complete(air_api_task())
+  loop.close()
 @app.route('/')
 def redirect_to_home():
   print("Pong!")
@@ -23,4 +37,6 @@ def render_petition_page():
 @app.errorhandler(404)
 def page_not_found(e):
   return(render_template('404.html'))
-app.run(host='0.0.0.0',port=8080)
+thread = threading.Thread(target = api_task_loop)
+thread.start()
+app.run(host = '0.0.0.0', port = 8080, threaded = True)
