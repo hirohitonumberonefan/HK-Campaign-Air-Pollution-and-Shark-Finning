@@ -3,6 +3,7 @@ import time
 import asyncio
 import flask_script
 import os
+#Import all functions from api.py. Funny how there's only one isn't it
 from api import *
 import threading
 from flask import Flask, render_template, redirect
