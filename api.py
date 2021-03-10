@@ -14,5 +14,6 @@ async def get_data():
       with open('waqi_response.json','r') as file:
         waqi_json = json.load(file)
       with open('air_aqi.txt','w') as txtfile:
+        #I rather be storing this in a text file than parsing it with Javascript
         txtfile.write(str(waqi_json['data']['aqi']))
   return(waqi_response)
