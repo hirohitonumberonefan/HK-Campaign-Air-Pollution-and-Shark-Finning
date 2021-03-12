@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb {
 #counter:before {
   font-size: 60px;
   text-align: center;
-  content:"";
+  content: "";
   color: white;
 }
 </style>
@@ -96,12 +96,56 @@ body::-webkit-scrollbar-thumb {
   <a href="home">Home</a>
   <a href="air_pollution">Air Pollution</a>
   <a class="active" href="shark_finning">Shark Finning</a>
+  <a class="aqi_stats" href="aqi_stats">Current Air Pollution Statistics</a>
   <a href="petition">Sign Our Petitions!</a>
 </div>
 <center><h1><b>Shark Finning</b></h1></center>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="counter"><span class="count"><h1>100000000</h1></span></div>
-<center><h2>Yep. That's the amount of sharks killed every year.</h2></center>
+<center><h2>Yep. That's the amount of sharks killed every year.</h2></center></div>
+<canvas id="sharkfinchart1" width="400" height="400"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js" type="text/javascript"></script>
+<script>
+const ctx = document.getElementById('sharkfinchart1').getContext('2d');
+ctx.height = 200;
+ctx.width = 200;
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019'],
+        datasets: [{
+            label: 'Sharks Killed Per Year (in millions)',
+            data: [23,25,25,32,36,24,26,28,30,34,30,32,30,32,34,36,33,43,46,51],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
 <script>
 $('.count').each(function () {
   $(this).prop('Counter',0).animate({
@@ -116,12 +160,15 @@ $('.count').each(function () {
 });
 </script>
 <center><p>Shark Finning is a cruel way to extract the fins from sharks. The sharks are cut off from their fins and dumped back into the ocean, where they can't swim or breathe without their fins, and suffocate to death.</p></center>
-<br><br>
+
+<br>
+<br>
+
 <center><img src= "https://lh3.googleusercontent.com/bh10z3nbXLFTQ12dczVGKw4gmB58eyMzLN73FmghYODecVxr238tuHJ9wulCPh-i9wmJ-IRwdR_WZ4oKSEXBzrrp54fqQElSx_UwVV9Yt0_4HCrtex-uZw-BrVBARZTQlYuKO5qWkw=w600-h315-p-k"alt = Shark Dying In Ocean style="width:auto;"></center>
  
 <br>
 <br>
-<center><p>Shark Finning dates back to the Ming dynasty, where it was made into a soup, a food solely eaten by emperors, back when it was extremely hard to find and kill a shark. It was prized not for its flavor, but for its soft, jelly-like texture. Back then, shark fins would be added to some broth, and flavored with some form of meat. Shark fin soup quickly rose up the ranks as a symbol of power in China.</p></center>
+<center><p>The history of shark finning dates back to the Ming dynasty. During those times, it was made into soup and only eaten by emperors. At the time, it was extremely hard to find and kill a shark. It was prized not for its flavor, but for its soft, jelly-like texture. Back then, shark fins would be added to some broth, and flavored with some form of meat. Shark fin soup quickly rose up the ranks as a symbol of power in China.</p></center>
 
 <br><br>
 

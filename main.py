@@ -6,13 +6,16 @@ import os
 #Import all functions from api.py. Funny how there's only one isn't it
 from api import *
 import threading
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, make_response
 app = Flask('HK Campaign | Air Pollution and Shark Finning Official Website')
 #Redirect if no route specified
 async def air_api_task():
   while True:
     await get_data()
-    time.sleep(400)
+    time.sleep(360)
+def define_response():
+  with open('air_aqi.txt','r') as txtfile:
+    return (txtfile.read())
 def api_task_loop():
   loop = asyncio.new_event_loop()
   asyncio.set_event_loop(loop)
@@ -35,6 +38,18 @@ def render_air_pollution():
 @app.route('/petition')
 def render_petition_page():
   return(render_template('petition.html'))
+@app.route('/games')
+def render_games():
+  return(render_template('games.html'))
+@app.route('/aqi_stats')
+def render_aqi_stats():
+  return(render_template('aqi_stats.html'))
+@app.route('/air_aqi.txt')
+def return_data():
+  print("Getting data.")
+  response = make_response(str(define_response()), 200)
+  response.mimetype = "text/plain"
+  return(response)
 @app.errorhandler(404)
 def page_not_found(e):
   return(render_template('404.html'))

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>HK | Campaign | Air Pollution and Shark Finning |  Sign our petition!</title>
+<link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+<style>
+body {
+  font-family: 'Fredoka One';font-size: 22px;
+  background-color: rgb(10,20,100);
+}
+h1 {
+  color: white;
+}
+h2 {
+  color: white;
+}
+p {
+  color: white;
+}
+h4 {
+  color: white;
+}
+h3 {
+  color: white;
+}
+.button {
+  background-color: #ab132f;
+  border-color: #730d1f;
+  border-style: solid;
+  color: #F5FFFA;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 12px;
+  transition-duration: 0.5s;
+}
+.button:hover {
+  background-color: #800000;
+  color: white;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: snow;    
+  border-radius: 20px;       
+  border: 3px;  
+}
+.topnav {
+  overflow: hidden;
+  background-color: #00004d;
+  border-radius: 12px;
+}
+.topnav a {
+  float: left;
+  color: #F5FFFA;
+  background-color: #000032;
+  border-color: #000024;
+  text-align: center;
+  border-style: solid;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 12px;
+  transition-duration: 0.5s;
+  margin: 5px;
+}
+.topnav a:hover {
+  background-color: #000017;
+  color: white;
+}
+.topnav a.active {
+  background-color: #00001a;
+  border-color: #000000;
+  color: white;
+}
+.rectangle-1 {
+  margin-top: -65px;
+  width: 799px;
+  height: 120px;
+  border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;
+  background-color: white;
+}
+#status {
+  display: none;
+}
+#counter {
+  color: rgb(26, 219, 84);
+  font-size: 80px;
+  text-align: center;
+  transition: color 2s ease;
+}
+#counter:before {
+  font-size: 80px;
+  text-align: center;
+  color: "rgb(26, 219, 84)";
+  content: "";
+  transition: color 2s ease;
+}
+#counter-1 {
+  display: inline-block;
+  color: rgb(26, 219, 84);
+  font-size: 80px;
+  transition: color 2s ease;
+}
+#counter-1:before {
+  font-size: 80px;
+  color: "rgb(26, 219, 84)";
+  content: "";
+  transition: color 2s ease;
+}
+#counter-2 {
+  color: rgb(26, 219, 84);
+  font-size: 80px;
+  transition: color 2s ease;
+}
+#counter-2:before {
+  font-size: 80px;
+  color: "rgb(26, 219, 84)";
+  content: "";
+  transition: color 2s ease;
+}
+#counter-3 {
+  display: inline-block;
+  color: rgb(26, 219, 84);
+  font-size: 80px;
+  transition: color 2s ease;
+}
+#counter-3:before {
+  font-size: 80px;
+  color: "rgb(26, 219, 84)";
+  content: "";
+  transition: color 2s ease;
+}
+#counter-4 {
+  color: rgb(26, 219, 84);
+  font-size: 80px;
+  transition: color 2s ease;
+}
+#counter-4:before {
+  font-size: 80px;
+  color: "rgb(26, 219, 84)";
+  content: "";
+  transition: color 2s ease;
+}
+#counter-5 {
+  color: rgb(26, 219, 84);
+  font-size: 80px;
+  transition: color 2s ease;
+}
+#counter-5:before {
+  font-size: 80px;
+  color: "rgb(26, 219, 84)";
+  content: "";
+  transition: color 2s ease;
+}
+#counter-6 {
+  color: rgb(26, 219, 84);
+  font-size: 80px;
+  transition: color 2s ease;
+}
+#counter-6:before {
+  font-size: 80px;
+  color: "rgb(26, 219, 84)";
+  content: "";
+  transition: color 2s ease;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <h2>&nbsp; HK | Campaign | Air Pollution and Shark Finning Official Website</h2>
+  <a href="home">Home</a>
+  <a href="air_pollution">Air Pollution</a>
+  <a href="shark_finning">Shark Finning</a>
+  <a class="active" href="aqi_stats">Current Air Pollution Statistics</a>
+  <a class="petition" href="petition">Sign Our Petitions!</a>
+</div>
+<center><h1><b>Current Air Pollution</b></h1></center>
+<center><div id="status"><h1></h1></div></center>
+<center><h1>Current AQI</h1></center>
+<div id="counter"><span class="count"><h1></h1></span></div>
+<center><p id="inform"></p></center>
+<center><h1 id="average_1"></h1></center>
+<center><div id="counter-1"><span class="count-1"><h1></h1></span></div></center><center>
+<center><h1 id="min_1"></h1></center>
+<center><div id="counter-2"><span class="count-2"><h1></h1></span></div></center>
+<center><h1 id="max_1"></h1></center>
+<center><div id="counter-3"><span class="count-3"><h1></h1></span></div></center><center>
+<center><h1 id="average_2"></h1></center>
+<center><div id="counter-4"><span class="count-4"><h1></h1></span></div></center><center>
+<center><h1 id="min_2"></h1></center>
+<center><div id="counter-5"><span class="count-5"><h1></h1></span></div></center>
+<center><h1 id="max_2"></h1></center>
+<center><div id="counter-6"><span class="count-6"><h1></h1></span></div></center><center>
+<center><i><p id="lastrecieved"></p></i></center>
+<script 
+<script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+var aqi;
+var average_pm25;
+var aqi_list;
+var average_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+var lastrecieved;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list = text.split(",")
+    aqi = aqi_list[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    lastrecieved = aqi_list[7]
+    //this is for a test
+    document.getElementById('status').innerHTML = aqi
+    document.getElementById('lastrecieved').innerHTML = 'Data last updated at ' + lastrecieved + ' GMT+8 (Hong Kong local time). The data is updated every 6 minutes.'
+    $('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+      Counter: aqi
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  });  
+});
+</script>
+<script>
+var aqi;
+var average_pm25;
+var aqi_list;
+var maximum_pm25;
+var average_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list = text.split(",")
+    aqi = aqi_list[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    //this is for a test
+    document.getElementById('status').innerHTML = aqi
+    $('.count-1').each(function () {
+    $(this).prop('Counter-1',0).animate({
+      Counter: average_pm25
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  });  
+});
+</script>
+<script>
+var aqi;
+var average_pm25;
+var aqi_list;
+var maximum_pm25;
+var average_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list = text.split(",")
+    aqi = aqi_list[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    //this is for a test
+    document.getElementById('status').innerHTML = aqi
+    $('.count-2').each(function () {
+    $(this).prop('Counter-2',0).animate({
+      Counter: maximum_pm25
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  });  
+});
+</script>
+<script>
+var aqi;
+var average_pm25;
+var aqi_list;
+var maximum_pm25;
+var average_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list = text.split(",")
+    aqi = aqi_list[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    //this is for a test
+    document.getElementById('status').innerHTML = aqi
+    $('.count-3').each(function () {
+    $(this).prop('Counter-3',0).animate({
+      Counter: minimum_pm25
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  });  
+});
+</script>
+<script>
+var aqi;
+var average_pm25;
+var aqi_list;
+var maximum_pm25;
+var average_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list = text.split(",")
+    aqi = aqi_list[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    //this is for a test
+    document.getElementById('status').innerHTML = aqi
+    $('.count-4').each(function () {
+    $(this).prop('Counter-4',0).animate({
+      Counter: average_o3
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  });  
+});
+</script>
+<script>
+var aqi;
+var average_pm25;
+var aqi_list;
+var maximum_pm25;
+var average_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list = text.split(",")
+    aqi = aqi_list[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    //this is for a test
+    document.getElementById('status').innerHTML = aqi
+    $('.count-5').each(function () {
+    $(this).prop('Counter-5',0).animate({
+      Counter: maximum_o3
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  });  
+});
+</script>
+<script>
+var aqi;
+var average_pm25;
+var aqi_list;
+var maximum_pm25;
+var average_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list = text.split(",")
+    aqi = aqi_list[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    //this is for a test
+    document.getElementById('status').innerHTML = aqi
+    $('.count-6').each(function () {
+    $(this).prop('Counter-6',0).animate({
+      Counter: minimum_o3
+    }, {
+      duration: 2000,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+      });
+    });
+  });  
+});
+</script>
+<script>
+var aqi2;
+var aqi_list;
+var average_pm25;
+var maximum_pm25;
+var minimum_pm25;
+var average_o3;
+var maximum_o3;
+var minimum_o3;
+fetch("air_aqi.txt").then(function(response) {
+  response.text().then(function(text) {
+    aqi_list2 = text.split(",")
+    aqi2 = aqi_list2[0]
+    average_pm25 = aqi_list[1]
+    maximum_pm25 = aqi_list[2]
+    minimum_pm25 = aqi_list[3]
+    average_o3 = aqi_list[4]
+    maximum_o3 = aqi_list[5]
+    minimum_o3 = aqi_list[6]
+    var colors = ["rgb(26, 219, 84)","rgb(252, 255, 48)","rgb(255, 163, 5)","rgb(255, 20, 20)","rgb(79, 27, 94)","rgb(59, 5, 5)"]
+    var messages = [", which poses little or no risk to anyone, as the air is very clean.",". Air quality is acceptable. Some people that is sensitive to air pollutants are in a moderate risk of health effects.",". Sensitive people may experience health effects.",". Everyone may start experiencing health effects, while sensitive people will start experiencing serious health effetcs.",". The entire population is very likely to be effected.",". Everyone will start experiencing serious health effects."]
+    function find_color(aqi_value) {
+      var return_val;
+      if (aqi_value < 50) {
+        return_val = colors[0]
+      } else if (aqi_value < 100) {
+        return_val = colors[1]
+      } else if (aqi_value < 150) {
+        return_val = colors[2]
+      } else if (aqi_value < 200) {
+        return_val = colors[3]
+      } else if (aqi_value < 300) {
+        return_val = colors[4]
+      } else if (aqi_value < 500) {
+        return_val = colors[5]
+      }
+      return return_val
+    }
+    function find_color_pm25(pm25_value) {
+      var return_val;
+      if (pm25_value < 12) {
+        return_val = colors[0]
+      } else if (pm25_value < 35) {
+        return_val = colors[1]
+      } else if (pm25_value < 55) {
+        return_val = colors[2]
+      } else if (pm25_value < 150) {
+        return_val = colors[3]
+      } else if (pm25_value < 250) {
+        return_val = colors[4]
+      } else if (pm25_value < 500) {
+        return_val = colors[5]
+      }
+      return return_val
+    }
+    function find_color_o3(o3_value) {
+      var return_val;
+      if (o3_value < 64) {
+        return_val = colors[0]
+      } else if (o3_value < 84) {
+        return_val = colors[1]
+      } else if (o3_value < 104) {
+        return_val = colors[2]
+      } else if (o3_value < 124) {
+        return_val = colors[3]
+      } else if (o3_value < 374) {
+        return_val = colors[4]
+      } else if (o3_value < 500) {
+        return_val = colors[5]
+      }
+      return return_val
+    }
+    function find_message(aqi_value) {
+      var return_val;
+      if (aqi_value < 50) {
+        return_val = messages[0]
+      } else if (aqi_value < 100) {
+        return_val = messages[1]
+      } else if (aqi_value < 150) {
+        return_val = messages[2]
+      } else if (aqi_value < 200) {
+        return_val = messages[3]
+      } else if (aqi_value < 300) {
+        return_val = messages[4]
+      } else if (aqi_value < 500) {
+        return_val = messages[5]
+      }
+      return return_val
+    }
+  var counter = document.getElementById('counter');
+  var counter_1 = document.getElementById('counter-1');
+  var counter_2 = document.getElementById('counter-2');
+  var counter_3 = document.getElementById('counter-3');
+  var counter_4 = document.getElementById('counter-4');
+  var counter_5 = document.getElementById('counter-5');
+  var counter_6 = document.getElementById('counter-6');
+  var inform = document.getElementById('inform');
+  var average_1 = document.getElementById('average_1');
+  var min_1 = document.getElementById('min_1');
+  var max_1 = document.getElementById('max_1');
+  var average_2 = document.getElementById('average_2');
+  var min_2 = document.getElementById('min_2');
+  var max_2 = document.getElementById('max_2');
+  counter.style.color = find_color(aqi2);
+  inform.innerHTML = "The current air pollution is " + aqi2 + find_message(aqi2)
+  counter_1.style.color = find_color_pm25(average_pm25)
+  counter_2.style.color = find_color_pm25(maximum_pm25)
+  counter_3.style.color = find_color_pm25(minimum_pm25)
+  counter_4.style.color = find_color_o3(average_o3)
+  counter_5.style.color = find_color_o3(maximum_o3)
+  counter_6.style.color = find_color_o3(minimum_o3)
+  average_1.innerHTML = "Average PM25 today"
+  min_1.innerHTML = "Maximum PM25 today"
+  max_1.innerHTML = "Minimum PM25 today"
+  average_2.innerHTML = "Average O3 today"
+  min_2.innerHTML = "Maximum O3 today"
+  max_2.innerHTML = "Minimum O3 today"
+  });  
+});
+</script>
+</body>
+</html>
