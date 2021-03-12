@@ -564,6 +564,7 @@ fetch("air_aqi.txt").then(function(response) {
   counter_4.style.color = find_color_o3(average_o3)
   counter_5.style.color = find_color_o3(maximum_o3)
   counter_6.style.color = find_color_o3(minimum_o3)
+  //by doing this i add a delay for the text because the counters is blank for a second and in that second the text boxes fill in the space so it looks real ugly and this solves that
   average_1.innerHTML = "Average PM25 today"
   min_1.innerHTML = "Maximum PM25 today"
   max_1.innerHTML = "Minimum PM25 today"
