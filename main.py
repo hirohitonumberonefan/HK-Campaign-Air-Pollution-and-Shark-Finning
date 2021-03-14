@@ -7,7 +7,7 @@ import os
 from api import *
 import threading
 from flask import Flask, render_template, redirect, make_response
-app = Flask('HK Campaign | Air Pollution and Shark Finning Official Website')
+app = Flask(__name__, static_url_path = "/static", static_folder = "static")
 #Redirect if no route specified
 async def air_api_task():
   while True:
@@ -54,5 +54,6 @@ def return_data():
 def page_not_found(e):
   return(render_template('404.html')), 404
 thread = threading.Thread(target = api_task_loop)
-thread.start()
-app.run(host = '0.0.0.0', port = 8080, threaded = True)
+if __name__ == '__main__':
+  thread.start()
+  app.run(host = '0.0.0.0', port = 8080, threaded = True)

@@ -121,10 +121,9 @@ var config = {
     update: update
   }
 };
-var airpollutiongame1 = new Phaser.Game(config);
 function preload () {
-  this.load.image('sky','assets/sky.png')
-  this.load.spritesheet('character','assets/character.png',{frameWidth: 32, frameHeight: 48});
+  this.load.image('sky',"/static/sky.png")
+  this.load.spritesheet('character',"/static/character.png",{frameWidth: 32, frameHeight: 48});
   this.add.image(400, 300, 'sky')
 }
 function create () {
@@ -133,6 +132,7 @@ function create () {
 function update () {
 
 }
+var airpollutiongame1 = new Phaser.Game(config);
 </script>
 </body>
 </html>
