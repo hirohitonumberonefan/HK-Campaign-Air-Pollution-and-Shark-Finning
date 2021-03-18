@@ -24,7 +24,7 @@ def api_task_loop():
 @app.route('/')
 def redirect_to_home():
   print("Pong!")
-  return redirect('https://HK-Campaign-Air-Pollution-and-Shark-Finning.98129182.repl.co/home',302)
+  return redirect('https://HK-Campaign-Air-Pollution-and-Shark-Finning.98129182.repl.co/home', 302)
 @app.route('/home')
 def render_home():
   print("Rendering....")

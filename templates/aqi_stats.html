@@ -196,6 +196,7 @@ body::-webkit-scrollbar-thumb {
 <center><h1 id="max_2"></h1></center>
 <center><div id="counter-6"><span class="count-6"><h1></h1></span></div></center><center>
 <center><i><p id="lastrecieved"></p></i></center>
+<center><i><p id="credit"></p></i></center>
 <script 
 <script 
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -223,6 +224,7 @@ fetch("air_aqi.txt").then(function(response) {
     //this is for a test
     document.getElementById('status').innerHTML = aqi
     document.getElementById('lastrecieved').innerHTML = 'Data last updated at ' + lastrecieved + ' GMT+8 (Hong Kong local time). The data is updated every 6 minutes.'
+    document.getElementById('credit').innerHTML = 'Data sourced from WAQI.'
     $('.count').each(function () {
     $(this).prop('Counter',0).animate({
       Counter: aqi

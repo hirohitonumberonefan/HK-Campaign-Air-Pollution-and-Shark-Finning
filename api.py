@@ -23,21 +23,7 @@ async def get_data():
         #I rather be storing this in a text file than parsing it with Javascript
         txtfile.write(str(waqi_json['data']['aqi']))
       with open('air_aqi.txt','a') as txtfile:
-        #Could've written all in one go but eh
-        txtfile.write(",")
         forecast_pm25 = waqi_json['data']['forecast']['daily']['pm25'][2]
         forecast_o3 = waqi_json['data']['forecast']['daily']['o3'][2]
-        txtfile.write(str(forecast_pm25['avg']))
-        txtfile.write(",")
-        txtfile.write(str(forecast_pm25['max']))
-        txtfile.write(",")
-        txtfile.write(str(forecast_pm25['min']))
-        txtfile.write(",")
-        txtfile.write(str(forecast_o3['avg']))
-        txtfile.write(",")
-        txtfile.write(str(forecast_o3['max']))
-        txtfile.write(",")
-        txtfile.write(str(forecast_o3['min']))
-        txtfile.write(",")
-        txtfile.write(hk_time_format)
+        txtfile.write(',' + str(forecast_pm25['avg']) + ',' + str(forecast_pm25['max']) + ',' + str(forecast_pm25['min']) + ',' + str(forecast_o3['avg']) + ',' + str(forecast_o3['max']) + ',' + str(forecast_o3['min']) + ',' + hk_time_format)
   return(waqi_response)
